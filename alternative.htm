@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>二択ランダム占い</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #result {
+      font-size: 30px;
+      margin-top: 30px;
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <h1>二択ランダム占い</h1>
+  <p>迷ったら選んでください：</p>
+  <input type="text" id="optionA" placeholder="選択肢A">
+  <input type="text" id="optionB" placeholder="選択肢B"><br>
+  <button onclick="choose()">決定！</button>
+
+  <p id="result"></p>
+
+  <script>
+    function choose() {
+      const a = document.getElementById("optionA").value || "A";
+      const b = document.getElementById("optionB").value || "B";
+      const options = [a, b];
+
+      // ランダムで選ぶ
+      const choice = options[Math.floor(Math.random() * options.length)];
+
+      // 占い風コメントも追加
+      const comments = [
+        "今日はこれに従ってみて！",
+        "直感でGO！",
+        "慎重派なら無理せずもう一度考えて",
+        "運命はこれにある…かも"
+      ];
+      const comment = comments[Math.floor(Math.random() * comments.length)];
+
+      document.getElementById("result").innerText = choice + " → " + comment;
+    }
+  </script>
+</body>
+</html>
