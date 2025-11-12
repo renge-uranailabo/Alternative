@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>“ñ‘ğƒ‰ƒ“ƒ_ƒ€è‚¢</title>
+  <title>äºŒæŠãƒ©ãƒ³ãƒ€ãƒ å ã„</title>
   <style>
     body {
       font-family: sans-serif;
@@ -23,11 +23,11 @@
   </style>
 </head>
 <body>
-  <h1>“ñ‘ğƒ‰ƒ“ƒ_ƒ€è‚¢</h1>
-  <p>–À‚Á‚½‚ç‘I‚ñ‚Å‚­‚¾‚³‚¢F</p>
-  <input type="text" id="optionA" placeholder="‘I‘ğˆA">
-  <input type="text" id="optionB" placeholder="‘I‘ğˆB"><br>
-  <button onclick="choose()">Œˆ’èI</button>
+  <h1>äºŒæŠãƒ©ãƒ³ãƒ€ãƒ å ã„</h1>
+  <p>è¿·ã£ãŸã‚‰é¸ã‚“ã§ãã ã•ã„ï¼š</p>
+  <input type="text" id="optionA" placeholder="é¸æŠè‚¢A">
+  <input type="text" id="optionB" placeholder="é¸æŠè‚¢B"><br>
+  <button onclick="choose()">æ±ºå®šï¼</button>
 
   <p id="result"></p>
 
@@ -37,19 +37,19 @@
       const b = document.getElementById("optionB").value || "B";
       const options = [a, b];
 
-      // ƒ‰ƒ“ƒ_ƒ€‚Å‘I‚Ô
+      // ãƒ©ãƒ³ãƒ€ãƒ ã§é¸ã¶
       const choice = options[Math.floor(Math.random() * options.length)];
 
-      // è‚¢•—ƒRƒƒ“ƒg‚à’Ç‰Á
+      // å ã„é¢¨ã‚³ãƒ¡ãƒ³ãƒˆã‚‚è¿½åŠ 
       const comments = [
-        "¡“ú‚Í‚±‚ê‚É]‚Á‚Ä‚İ‚ÄI",
-        "’¼Š´‚ÅGOI",
-        "Td”h‚È‚ç–³—‚¹‚¸‚à‚¤ˆê“xl‚¦‚Ä",
-        "‰^–½‚Í‚±‚ê‚É‚ ‚éc‚©‚à"
+        "ä»Šæ—¥ã¯ã“ã‚Œã«å¾“ã£ã¦ã¿ã¦ï¼",
+        "ç›´æ„Ÿã§GOï¼",
+        "æ…é‡æ´¾ãªã‚‰ç„¡ç†ã›ãšã‚‚ã†ä¸€åº¦è€ƒãˆã¦",
+        "é‹å‘½ã¯ã“ã‚Œã«ã‚ã‚‹â€¦ã‹ã‚‚"
       ];
       const comment = comments[Math.floor(Math.random() * comments.length)];
 
-      document.getElementById("result").innerText = choice + " ¨ " + comment;
+      document.getElementById("result").innerText = choice + " â†’ " + comment;
     }
   </script>
 </body>
